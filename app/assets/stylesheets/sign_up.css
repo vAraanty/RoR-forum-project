@@ -1,0 +1,98 @@
+.form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 3vw;
+    width: 900px;
+    box-shadow: 0 0 4px black;
+    margin: 20px auto;
+}
+
+form {
+    width: 100%;
+    font-family: 'Montserrat',sans-serif!important;
+}
+
+form > * {
+    margin-top: 20px;
+}
+
+input, label,
+select, textarea {
+    display: block;
+}
+
+input, select, textarea{
+    font-size: 1em;
+    height: 30px;
+    width: 330px;
+    text-indent: 5px;
+}
+
+label {
+    margin-bottom: 3px;
+}
+
+em {
+    font-size: 0.5em;
+    margin-top: 3px;
+}
+
+input[type="submit"]{
+    font-family: Montserrat;
+    font-weight: bold;
+    background-color: white;
+    color: #b7403a;
+    border: 2px solid #b7403a;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    color: red;
+    border-color: red;
+}
+
+.field-set > .field {
+    align-items: start;
+}
+
+.field > em {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+    align-items: center;
+}
+
+.field-set {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links > a {
+    text-decoration: none;
+    color: black;
+}
+
+.links > a:hover {
+    color: red;
+}
+
+.remember {
+    flex-direction: row;
+}
+
+input[type="checkbox"] {
+    margin: 0 15px 0 0;
+    height: 20px;
+    width: 20px;
+}
+
+.links > a:not(:first-of-type) {
+    margin-top: 10px;
+}

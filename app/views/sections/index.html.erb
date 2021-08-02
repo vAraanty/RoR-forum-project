@@ -1,0 +1,11 @@
+<h1 class="page-title">My forum</h1><br><br>
+<p>Forum sections:</p>
+<hr>
+<% @sections.each do |section| %>
+  <p><%= section.name %></p>
+  <% section.categories.each do |category| %>
+    <a style="color: #ff0000; margin-left: 15px" href="<%= category_path(category) %>"><%= category.name %></a>
+    <p style="margin-left: 30px; font-size: 12px; color: gray"><%= category.description %></p>
+  <% end %>
+  <hr>
+<% end %>

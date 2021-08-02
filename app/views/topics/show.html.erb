@@ -1,0 +1,33 @@
+<h1><%= @topic.title %></h1>
+<hr>
+
+<table>
+  <tr>
+    <th>#</th>
+    <th>Author</th>
+    <th>Message</th>
+  </tr>
+<% @topic.posts.each_with_index do |post, index| %>
+  <tr>
+    <td><%= index + 1 %></td>
+    <td><%= post.user.username %></td>
+    <td><%= post.message %></td>
+  </tr>
+<% end %>
+</table>
+<hr>
+<% if user_signed_in? %>
+  <p>Make a post:</p>
+  <%= form_with model: [ @topic, @topic.posts.build ] do |form| %>
+    <p>
+      <%= form.label :message %>
+      <%= form.text_area :message %>
+    </p>
+
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
+<% else %>
+  <%= link_to 'Sign in to make a post in the topic!', new_user_session_path %>
+<% end %>

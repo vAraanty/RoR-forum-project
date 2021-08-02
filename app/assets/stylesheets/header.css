@@ -1,0 +1,22 @@
+.header-link {
+    text-decoration: none;
+    font-family: 'Montserrat', Helvetica, Arial, Sans-Serif;
+    color: gold;
+    text-shadow: 1px 1px 1px black;
+    font-size: 2em;
+}
+
+.header-link:hover {
+    color: #ff0000;
+}
+
+header {
+    padding: 5px 80px;
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+}

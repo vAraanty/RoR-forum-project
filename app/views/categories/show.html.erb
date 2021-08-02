@@ -1,0 +1,26 @@
+<h1>Category <%= @category.name %></h1>
+
+<%= link_to 'New topic', new_topic_path, style: 'font-size: 25px'  %>
+
+<p>Category topics:</p>
+<hr>
+<table>
+  <tr>
+    <th>Topic</th>
+    <th>Author</th>
+    <th>Views</th>
+    <th>Posts</th>
+    <th>Status</th>
+    <th>Creation time</th>
+  </tr>
+<% @category.topics.each do |topic| %>
+  <tr>
+    <td><a style="color: red" href="<%= topic_path(topic) %>"><%= topic.title %></a></td>
+    <td><%= topic.user.username %></td>
+    <td><%= topic.views > 0 ? topic.views : '-' %></td>
+    <td><%= topic.posts.count > 0 ? topic.posts.count : '-' %></td>
+    <td><%= '🖈' if topic.pinned %> <%= '🔒' if topic.closed %></td>
+    <td><%= topic.created_at %></td>
+  </tr>
+<% end %>
+</table>
